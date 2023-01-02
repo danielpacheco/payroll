@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+
 /**
  * The company ACME offers their employees the flexibility to work the hours they want. They will pay for the hours worked based on the day of the week and time of day, according to the following table:
  * Monday - Friday
@@ -48,4 +50,9 @@
  * Please include the proper instructions to compile your project in the README file.
  */
 public class Payroll {
+
+    public static void main(String[] args) throws FileNotFoundException {
+        TextParser textParser = new TextParser();
+        System.out.println(textParser.parse(args[0]));
+    }
 }
